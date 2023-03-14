@@ -1,17 +1,5 @@
-<div class="container w-full mx-auto px-6 py-6   md:px-12" style="background-color:#DDCFB2" >
-    <img
-    class="logo w-60 mx-auto my-1 md:my-4"
-    id="logo"
-    src="https://d1e00ek4ebabms.cloudfront.net/production/6b7c5fa6-b824-4430-b544-2102ad555fd1.jpg"
-    alt="Backimage"
-  />
-  <img
-    class="logo-transparent fixed top-0 -right-20 w-60"
-    id="logo"
-    src="https://d1e00ek4ebabms.cloudfront.net/production/6b7c5fa6-b824-4430-b544-2102ad555fd1.jpg"
-    alt="Backimage"
-  />
-
+<!-- <div class="container w-full mx-auto px-6 py-6   md:px-12">
+    
 
   <p class="my-3 w-36 mx-auto md:hidden text-center text-gray-900">
     Sign in and get a ride for your child
@@ -25,33 +13,33 @@
 
     <div
       class="right-tab flex w-80 flex-col mx-auto shadow-lg md:mx-0 justify-center rounded-3xl h-80 px-7 md:px-12"
-      style="background-color:grey"
+      style="background-color:#0e0e0e"
     >
       <form
-        class="w-full mx-auto"
+        class="w-full mx-auto text-orange-300"  
       >
         <div class="w-full">
             <div class="">
               <div class="form-control">
-                <label for="email-address" class="label text-accent">Email</label>
+                <label for="email-address" class="label text-accent" >Email</label>
                 <input
                   id="email-address"
                   required
                   class="input w-full h-10 text-white bg-accent bg-opacity-50 placeholder:text-accent"
-                  placeholder="Email address"
+                  placeholder="Email address" style="border: 1px solid;  padding: 10px;box-shadow: 5px 10px white;box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;"
                 />
               </div>
 
 
-              <div class="form-control w-full">
-                <label for="password" class="label text-accent">Password</label>
-                <input
+              <div class="form-control w-full " >
+                <label for="password" class="label text-accent" >Password</label>
+                <input 
                   id="password"
                   type="password"
                   required
                   class="input w-full h-10 text-white bg-accent bg-opacity-50 placeholder:text-accent"
-                  placeholder="Password"
-                  formControlName="password"
+                  placeholder="Password" 
+                  formControlName="password zoom-in" style="border: 1px solid;  padding: 10px;box-shadow: 5px 10px white;"
                 />
               </div>
 
@@ -84,4 +72,46 @@
     [routerLink]="['/register']">
     Sign up</a></p>
 
-</div>
+</div> -->
+
+
+
+    <img
+    class="logo  mx-auto  my-1 md:my-4" style="height: 200px;width: 200px;"
+    id="logo"
+    src="https://media.istockphoto.com/id/953963430/vector/hand-holding-money-hand-with-banknotes-cash-payment-and-receiving-money-icon-paying-money.jpg?s=612x612&w=0&k=20&c=UQe4rlx20qbv7YfBIgYNexi6fAEAz1-ZgodZis6jur4="
+    alt="Backimage"
+  /> 
+  <p class="my-3 w-36 mx-auto md:hidden text-center text-gray-900" style="margin-left:150px">
+    You ask We Serve
+  </p>
+
+  <div class="wrapper">
+    <form class="p-3 mt-3" >
+      <div class="lbl">
+        <label for="Name">Email</label>
+      </div>
+      <div class="form-field d-flex align-items-center">
+        <span class="far fa-user"></span>
+        <input type="email" formControlName="email" id="email" placeholder="Enter Email">
+  
+        <i class="fa fa-envelope fa-lg" aria-hidden="true"></i>
+      </div>
+      <div class="lbl">
+        <label for="password">Password</label>
+      </div>
+      <div class="form-field d-flex align-items-center">
+        <span class="fas fa-key"></span>
+        <input type="password" formControlName="password" id="password" autocomplete="current-password" required
+          class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+          placeholder="Enter Password">
+        <i class="fa fa-lock fa-lg" aria-hidden="true"></i>
+      </div>
+      <button class="btn mt-3" >Login</button>
+    </form>
+    <br>
+    <div class="text-center fs-6">
+      <a href="/">create a new account</a>
+    </div>
+
+  </div>
