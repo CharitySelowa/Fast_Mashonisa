@@ -1,12 +1,16 @@
-const express = require('express')
+const express = require('express');
 const app = express();
-const bodyparser = require('body-parser')
-
-const {getAllUsers} = require('../controllers/users')
-
+const bodyparser = require('body-parser');
+const router = express.Router()
 
 
 
-app.get('/getAllUsers',getAllUsers)
+const {getAllUsers} = require('../controllers/users');
+const {login} = require("../controllers/login");
+
+
+
+app.get('/getAllUsers',getAllUsers);
+router.post('/login' , login);
 
 module.exports = app;

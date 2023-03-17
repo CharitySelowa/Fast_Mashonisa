@@ -4,6 +4,7 @@ require("dotenv").config();
 const app = express();
 
 const user = require('./routes/users');
+const {login} = require("./controllers/login");
 
 var corsOptions = {
   origin: "*",
@@ -19,6 +20,7 @@ app.listen(5050, () => {
 
 
 app.use("/users", user); // User endpoint API
+app.use("/login", login);
 
 
 
