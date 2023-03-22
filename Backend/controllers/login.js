@@ -31,11 +31,9 @@ exports.login = async (req, res) => {
               email: email,
               password: password,
               user_id: user[0].user_id,
-              name: user[0].name,
-              surname: user[0].surname,
+              username: user[0].name,
               account: user[0].account,
-              image: user[0].image,
-              ratings: user[0].ratings,
+            
             },
             "ojiehfiuehfowijfwpifjwpifjhwifghwpfihwpgwhgpi",{
                 expiresIn:'24h',

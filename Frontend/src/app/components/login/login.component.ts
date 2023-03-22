@@ -14,6 +14,7 @@ import { HotToastService } from '@ngneat/hot-toast';
 import { User } from 'src/app/interfaces/user';
 import { catchError } from 'rxjs';
 import { of } from 'rxjs';
+import {BehaviorSubject} from 'rxjs'
 
 @Component({
   selector: 'app-login',
@@ -89,7 +90,24 @@ export class LoginComponent implements OnInit {
     return this.forgotPasswordForm.controls;
   }
 
-
+  onforgotPassword(form: FormGroup) {
+    this.submitted = true;
+    //this.toast.loading('Processing ...', { duration: 10000 });
+    if (form.valid) {
+      this.auth1.forgotPassword(form.value).pipe(
+        this.toast.observe({
+          loading: 'Processing...',
+          success: (s:any) => s.message,
+          error: (e) =>  e.error.message,
+       }),catchError((error) => of(error))
+      ).subscribe(
+        (res: any) => {
+          form.reset();
+          this.submitted = false;
+        }
+      );
+    }
+  }
 
   onlogin(form: FormGroup) {
     //Sign in the User to the to the app
@@ -123,11 +141,6 @@ export class LoginComponent implements OnInit {
       );
     }
   }
-
-
-
-
-  
 
 
 }
